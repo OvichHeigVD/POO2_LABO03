@@ -1,6 +1,10 @@
-//
-// Created by stefa on 28.04.2021.
-//
+/**
+ * @authors Dalia Maillefer, Stefan Teofanovic
+ * @file Thief.cpp
+ * @date 05.05.2021
+ *
+ * @brief Implementation of the Thief class
+ */
 
 #include "Thief.h"
 

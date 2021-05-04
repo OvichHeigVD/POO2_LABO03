@@ -194,7 +194,7 @@
         </multiplicity>
       </role>
     </association>
-    <association aggregation="NONE" direction="FIRST_TO_SECOND" id="68559" name="dady">
+    <association aggregation="NONE" direction="FIRST_TO_SECOND" id="68559" name="daddy">
       <role componentId="66787" name="" visibility="PRIVATE">
         <multiplicity>
           <min>1</min>
@@ -208,7 +208,7 @@
         </multiplicity>
       </role>
     </association>
-    <association aggregation="NONE" direction="FIRST_TO_SECOND" id="68749" name="momy">
+    <association aggregation="NONE" direction="FIRST_TO_SECOND" id="68749" name="mommy">
       <role componentId="66787" name="" visibility="PRIVATE">
         <multiplicity>
           <min>1</min>
@@ -223,8 +223,8 @@
       </role>
     </association>
     <entity entityType="ENUM" id="67069" name="Gender">
-      <EnumValue>Male</EnumValue>
-      <EnumValue>Female</EnumValue>
+      <EnumValue>Boy</EnumValue>
+      <EnumValue>Girl</EnumValue>
     </entity>
     <entity entityType="ENUM" id="66807" name="PersonType">
       <EnumValue>Family</EnumValue>
@@ -320,8 +320,8 @@
     <entity entityType="CLASS" id="66787" isAbstract="true" name="Child" visibility="PUBLIC">
       <method is-constructor="true" isAbstract="true" isStatic="false" name="Child" returnType="" view="DEFAULT" visibility="PROTECTED">
         <variable const="false" name="name" type="string"/>
-        <variable const="false" name="momy" type="Mother*"/>
-        <variable const="false" name="dady" type="Father*"/>
+        <variable const="false" name="mommy" type="Mother*"/>
+        <variable const="false" name="daddy" type="Father*"/>
         <variable const="false" name="gender" type="Gender"/>
       </method>
       <method isAbstract="true" isStatic="false" name="isAccompaniedCorrectly" returnType="bool" view="DEFAULT" visibility="PUBLIC">

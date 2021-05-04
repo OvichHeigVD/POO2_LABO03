@@ -1,9 +1,11 @@
-//
-// Created by stefa on 21.04.2021.
-//
+/**
+ * @authors Dalia Maillefer, Stefan Teofanovic
+ * @file Bank.cpp
+ * @date 05.05.2021
+ *
+ * @brief Implementing the class Bank
+ */
 
 #include "Bank.h"
-
-#include <utility>
 
 Bank::Bank(std::string name) : Container(std::move(name)) {}

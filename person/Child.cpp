@@ -1,26 +1,32 @@
-//
-// Created by stefa on 28.04.2021.
-//
+/**
+ * @authors Dalia Maillefer, Stefan Teofanovic
+ * @file Child.cpp
+ * @date 05.05.2021
+ *
+ * @brief Implementing the Child class
+ */
 
 #include "Child.h"
 
-Child::Child(std::string name, const Mother* momy, const Father* dady, const Gender gender)
-: Person(std::move(name), PersonType::Family), momy(momy), dady(dady), gender(gender) {}
+Child::Child(std::string name, const Mother* mommy,
+             const Father* daddy, const Gender gender):
+             Person(std::move(name), PersonType::Family),
+             mommy(mommy), daddy(daddy), gender(gender) {}
 
 bool Child::canDrive() const {
     return false;
 }
 
+bool Child::isChild() const{
+    return true;
+}
+
 const Mother* Child::myMom() const {
-    return this->momy;
+    return this->mommy;
 }
 
 const Father* Child::myDad() const {
-    return this->dady;
-}
-
-bool Child::isChild() const{
-    return true;
+    return this->daddy;
 }
 
 Child::Gender Child::getGender() const {
