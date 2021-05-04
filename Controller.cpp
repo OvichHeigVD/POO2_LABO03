@@ -215,6 +215,7 @@ void Controller::reinitialize() {
     this->rightBank->clear();
     this->leftBank->clear();
     this->boat->clear();
+    this->boat->anchorTo(leftBank);
     this->initPersons();
 }
 

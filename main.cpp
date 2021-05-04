@@ -16,10 +16,14 @@ void solutionCommands();
 void sonWithMotherButWithoutFatherTest();
 void daughterWithFatherButWithoutMotherTest();
 void thiefMustNotBeWithFamilyWithoutPoliceman();
-void thiefMustNotBeWithFamilyWithoutPoliceman();
+void thiefAndChildrenCannotDriveTheBoat();
 void onlyTwoPeopleOnTheBoat();
+void embarkingAndDisembarkingTheSamePeopleTwiceTest();
+void resetProgramTest();
+void wrongOrInvalidInputTest();
 
 int main() {
+
     Controller ctrl;
     ctrl.showMenu();
     ctrl.display();
@@ -27,10 +31,15 @@ int main() {
         ctrl.nextTurn();
     }
 
-//    solutionCommands();
-    sonWithMotherButWithoutFatherTest();
-//    daughterWithFatherButWithoutMotherTest();
-//    thiefMustNotBeWithFamilyWithoutPoliceman();
+    //solutionCommands();
+    //sonWithMotherButWithoutFatherTest();
+    //daughterWithFatherButWithoutMotherTest();
+    //thiefMustNotBeWithFamilyWithoutPoliceman();
+    //thiefAndChildrenCannotDriveTheBoat();
+    //onlyTwoPeopleOnTheBoat();
+    //embarkingAndDisembarkingTheSamePeopleTwiceTest();
+    //resetProgramTest();
+    //wrongOrInvalidInputTest();
 
     return EXIT_SUCCESS;
 }
@@ -64,11 +73,10 @@ void solutionCommands() {
 void sonWithMotherButWithoutFatherTest() {
     cout << "---- Son with mother but without father scenario : ----" << endl;
 
-    istringstream iss("e pere\n e pierre\n e pere\nq");
+    istringstream iss("e pere\ne paul\ne pere\nq");
     cin.rdbuf(iss.rdbuf());
 
     commonControllerRunTest();
-
 }
 
 void daughterWithFatherButWithoutMotherTest() {
@@ -83,13 +91,60 @@ void daughterWithFatherButWithoutMotherTest() {
 void thiefMustNotBeWithFamilyWithoutPoliceman() {
     cout << "---- Thief must NOT be with the family without policeman around : ----" << endl;
 
-    istringstream iss("e policier\ne voleur\ne policier\nm\nd voleur\nm\ne jeanne\nm\nd jeanne\nq");
+    istringstream iss("e policier\ne voleur\ne policier\nm\nd voleur\nm\ne jeanne\nm\nd jeanne"
+                      "\nr\ne voleur\ne jeanne\nq");
     cin.rdbuf(iss.rdbuf());
 
     commonControllerRunTest();
 }
 
+void thiefAndChildrenCannotDriveTheBoat() {
+
+    cout << endl << "---- Thief and children cannot drive the boat : ----" << endl;
+    // Case with thief
+    istringstream iss("e voleur\nm\nq");
+    cin.rdbuf(iss.rdbuf());
+    commonControllerRunTest();
+
+    // Case with 2 children
+    istringstream iss2("e paul\ne pierre\nm\nq");
+    cin.rdbuf(iss2.rdbuf());
+    commonControllerRunTest();
+}
+
 void onlyTwoPeopleOnTheBoat() {
     cout << endl << "---- Only two people in the boat : ----" << endl;
+    istringstream iss("e voleur\ne policier\ne jeanne\nq");
+    cin.rdbuf(iss.rdbuf());
 
+    commonControllerRunTest();
+}
+
+void embarkingAndDisembarkingTheSamePeopleTwiceTest() {
+    cout << "---- Wrong or invalid input : ----" << endl;
+
+    istringstream iss("e voleur\ne voleur\ne policier\nm\nd voleur\nd voleur\nq");
+    cin.rdbuf(iss.rdbuf());
+
+    commonControllerRunTest();
+}
+
+void resetProgramTest() {
+    cout << "---- Solution scenario : ----" << endl;
+
+    istringstream iss("e voleur\ne policier\nm\nd voleur\nm\ne jeanne\nm\n"
+                      "d policier\nd jeanne\nr\nq");
+    cin.rdbuf(iss.rdbuf());
+
+    commonControllerRunTest();
+}
+
+void wrongOrInvalidInputTest() {
+    cout << "---- Wrong or invalid input : ----" << endl;
+
+    istringstream iss("e paire\ne pierre et paul\nerer pere\n\ne voleur\n"
+                      "e policier\n\nm\nd valeur\nq");
+    cin.rdbuf(iss.rdbuf());
+
+    commonControllerRunTest();
 }
