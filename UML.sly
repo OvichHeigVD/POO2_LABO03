@@ -442,8 +442,8 @@
         <h>16</h>
       </multipliciteAssociation>
       <multipliciteAssociation>
-        <x>895</x>
-        <y>479</y>
+        <x>918</x>
+        <y>516</y>
         <w>21</w>
         <h>16</h>
       </multipliciteAssociation>
@@ -452,11 +452,11 @@
       <line>
         <point>
           <x>1111</x>
-          <y>381</y>
+          <y>371</y>
         </point>
         <point>
           <x>1031</x>
-          <y>381</y>
+          <y>371</y>
         </point>
         <point>
           <x>1031</x>
@@ -465,13 +465,13 @@
       </line>
       <labelAssociation>
         <x>1051</x>
-        <y>385</y>
+        <y>375</y>
         <w>31</w>
         <h>16</h>
       </labelAssociation>
       <roleAssociation>
         <x>1105</x>
-        <y>385</y>
+        <y>375</y>
         <w>0</w>
         <h>16</h>
       </roleAssociation>
@@ -483,7 +483,7 @@
       </roleAssociation>
       <multipliciteAssociation>
         <x>1097</x>
-        <y>359</y>
+        <y>349</y>
         <w>8</w>
         <h>16</h>
       </multipliciteAssociation>
