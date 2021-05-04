@@ -48,7 +48,7 @@ void Container::clear() {
     this->list.clear();
 }
 
-bool Container::isPresent(const Person *person) const {
+bool Container::contains(const Person *person) const {
     return (std::find(this->list.begin(), this->list.end(), person) != this->list.end());;
 }
 

@@ -11,8 +11,8 @@ class Person {
 public:
     enum PersonType { Family, Police, Thief };
     virtual bool canDrive() const;
-    PersonType getType() const;
     virtual bool isChild() const;
+    PersonType getType() const;
     std::string getName() const;
 protected:
     Person(std::string name, PersonType type);

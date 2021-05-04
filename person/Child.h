@@ -12,10 +12,10 @@ class Father;
 class Child : public Person{
 public:
     enum Gender { Male, Female };
+    virtual bool isAccompaniedCorrectly(bool fatherPresent, bool motherPresent) const = 0;
     bool canDrive() const override;
     bool isChild() const override;
     Gender getGender() const;
-    virtual bool isAccompaniedCorrectly(bool fatherPresent, bool motherPresent) const = 0;
     const Mother* myMom() const;
     const Father* myDad() const;
 protected:

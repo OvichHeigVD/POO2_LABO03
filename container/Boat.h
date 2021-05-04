@@ -10,7 +10,7 @@
 
 class Boat : public Container{
 public:
-    explicit Boat(Bank* defaultAnchor, size_t maxCapacity);
+    Boat(Bank* defaultAnchor, size_t maxCapacity);
     void anchorTo(Bank* bank);
     Bank* getAnchoredBank() const;
     void add(const Person* person) override;

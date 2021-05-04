@@ -18,8 +18,8 @@ public:
     using Iterator = List::iterator;
     explicit Container(std::string name);
     virtual void add(const Person* person);
-    virtual void remove(const Person* person);
-    bool isPresent(const Person* person) const;
+    void remove(const Person* person);
+    bool contains(const Person* person) const;
     void clear();
     Iterator begin();
     Iterator end();
