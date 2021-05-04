@@ -28,7 +28,7 @@ int main() {
     }
 
 //    solutionCommands();
-//    sonWithMotherButWithoutFatherTest();
+    sonWithMotherButWithoutFatherTest();
 //    daughterWithFatherButWithoutMotherTest();
 //    thiefMustNotBeWithFamilyWithoutPoliceman();
 
@@ -68,6 +68,7 @@ void sonWithMotherButWithoutFatherTest() {
     cin.rdbuf(iss.rdbuf());
 
     commonControllerRunTest();
+
 }
 
 void daughterWithFatherButWithoutMotherTest() {
