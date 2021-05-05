@@ -25,7 +25,7 @@ public:
 
     /**
      * Overriding abstract isPolice() method
-     * @return true
+     * @return true, a Policeman is indeed a policeman
      */
     bool isPolice() const override;
 };

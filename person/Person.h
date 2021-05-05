@@ -22,25 +22,25 @@ public:
     virtual bool canDrive() const;
 
     /**
-     * Abstract Method cheking if a Person is a child
+     * Abstract Method checking if a Person is a child
      * @return true if child, otherwise false (by default)
      */
     virtual bool isChild() const;
 
     /**
-     * Abstract Method cheking if a Person is a family member
+     * Abstract Method checking if a Person is a family member
      * @return false if not family, otherwise true (by default)
      */
     virtual bool isFamily() const;
 
     /**
-     * Abstract Method cheking if a Person is a Thief
+     * Abstract Method checking if a Person is a Thief
      * @return true if thief, otherwise false (by default)
      */
     virtual bool isThief() const;
 
     /**
-     * Abstract Method cheking if a Person is a Police
+     * Abstract Method checking if a Person is a Police
      * @return true if police, otherwise false (by default)
      */
     virtual bool isPolice() const;

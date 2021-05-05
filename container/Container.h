@@ -36,8 +36,6 @@ public:
     //Using an alias List::iterator as Iterator
     using Iterator = List::iterator;
 
-
-
     /**
      * Method adding a Person to the Container
      * @param person - a pointer to the Person

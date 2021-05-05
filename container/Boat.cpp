@@ -11,7 +11,7 @@
 #include "Boat.h"
 
 Boat::Boat(Bank* defaultAnchor, const size_t maxCapacity) :
-    Container("Bateau"), anchoredAt(defaultAnchor), maxCapacity(maxCapacity) {}
+    Container("Bateau"), anchoredAt(defaultAnchor), maxCapacity(maxCapacity) { }
 
 void Boat::anchorTo(Bank *bank) {
     this->anchoredAt = bank;

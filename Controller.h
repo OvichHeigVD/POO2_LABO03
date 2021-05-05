@@ -49,7 +49,7 @@ public:
     bool notEnd() const;
 
 private:
-    int turn; // number of turns
+    size_t turn; // number of turns
     bool isEnd; // boolean checking the end of the program
     Bank* rightBank; // the right bank of the river
     Bank* leftBank; // the left bank of the river

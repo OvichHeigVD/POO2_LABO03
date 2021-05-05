@@ -8,7 +8,6 @@
 
 #include "Person.h"
 
-
 Person::Person(std::string name) : name(std::move(name)) { }
 
 bool Person::canDrive() const {
@@ -17,10 +16,6 @@ bool Person::canDrive() const {
 
 bool Person::isChild() const {
     return false;
-}
-
-std::string Person::getName() const {
-    return this->name;
 }
 
 bool Person::isFamily() const {
@@ -33,4 +28,8 @@ bool Person::isThief() const {
 
 bool Person::isPolice() const {
     return false;
+}
+
+std::string Person::getName() const {
+    return this->name;
 }

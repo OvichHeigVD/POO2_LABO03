@@ -32,7 +32,7 @@ public:
 
     /**
      * Overriding abstract isThief() method
-     * @return true
+     * @return true, a Thief is indeed a thief
      */
     bool isThief() const override;
 };

@@ -351,7 +351,8 @@ bool Controller::checkChildAccompanimentRules(Container* where, const Person* wh
     const Father* myDad = child->myDad(); // Get parents
     const Mother* myMom = child->myMom();
 
-    if(!child->isAccompaniedCorrectly(where->contains(myDad), where->contains(myMom))) {
+    if(!child->isAccompaniedCorrectly(where->contains(myDad),
+                                      where->contains(myMom))) {
         // If boy or girl, displaying the correct prompt
         if(child->getGender() == Child::Boy) {
             std::cout << "### garcon avec sa mere sans son pere" << std::endl;

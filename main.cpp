@@ -1,6 +1,6 @@
 /**
  * @authors Dalia Maillefer, Stefan Teofanovic
- * @file Controller.h
+ * @file main.cpp
  * @date 05.05.2021
  *
  * @brief Launches the program, initialises it and runs the controller
@@ -9,8 +9,10 @@
 #include "container/Container.h"
 #include "Controller.h"
 #include <sstream>
+
 using namespace std;
 
+void allTests();
 void commonControllerRunTest();
 void solutionCommands();
 void sonWithMotherButWithoutFatherTest();
@@ -31,19 +33,24 @@ int main() {
         ctrl.nextTurn();
     }
 
-    //solutionCommands();
-    //sonWithMotherButWithoutFatherTest();
-    //daughterWithFatherButWithoutMotherTest();
-    //thiefMustNotBeWithFamilyWithoutPoliceman();
-    //thiefAndChildrenCannotDriveTheBoat();
-    //onlyTwoPeopleOnTheBoat();
-    //embarkingAndDisembarkingTheSamePeopleTwiceTest();
-    //resetProgramTest();
-    //wrongOrInvalidInputTest();
+    // Uncomment the line below to launch tests
+    //allTests();
 
     return EXIT_SUCCESS;
 }
 
+// -------------------------------- TESTS --------------------------------
+void allTests() {
+    solutionCommands();
+    sonWithMotherButWithoutFatherTest();
+    daughterWithFatherButWithoutMotherTest();
+    thiefMustNotBeWithFamilyWithoutPoliceman();
+    thiefAndChildrenCannotDriveTheBoat();
+    onlyTwoPeopleOnTheBoat();
+    embarkingAndDisembarkingTheSamePeopleTwiceTest();
+    resetProgramTest();
+    wrongOrInvalidInputTest();
+}
 
 void commonControllerRunTest() {
     Controller ctrl;
@@ -65,8 +72,8 @@ void solutionCommands() {
                       "d pere\nd paul\ne voleur\ne policier\nm\nd policier\n"
                       "d voleur\ne pierre\ne policier\nm\nd pierre\nm\ne voleur\n"
                       "m\nd policier\nd voleur\nq");
-    cin.rdbuf(iss.rdbuf());
 
+    cin.rdbuf(iss.rdbuf());
     commonControllerRunTest();
 }
 
@@ -89,17 +96,17 @@ void daughterWithFatherButWithoutMotherTest() {
 }
 
 void thiefMustNotBeWithFamilyWithoutPoliceman() {
-    cout << "---- Thief must NOT be with the family without policeman around : ----" << endl;
+    cout << "---- Thief must NOT be with the family without policeman around : "
+            "----" << endl;
 
-    istringstream iss("e policier\ne voleur\ne policier\nm\nd voleur\nm\ne jeanne\nm\nd jeanne"
-                      "\nr\ne voleur\ne jeanne\nq");
+    istringstream iss("e policier\ne voleur\ne policier\nm\nd voleur\nm\n"
+                      "e jeanne\nm\nd jeanne\nr\ne voleur\ne jeanne\nq");
+
     cin.rdbuf(iss.rdbuf());
-
     commonControllerRunTest();
 }
 
 void thiefAndChildrenCannotDriveTheBoat() {
-
     cout << endl << "---- Thief and children cannot drive the boat : ----" << endl;
     // Case with thief
     istringstream iss("e voleur\nm\nq");
@@ -115,27 +122,27 @@ void thiefAndChildrenCannotDriveTheBoat() {
 void onlyTwoPeopleOnTheBoat() {
     cout << endl << "---- Only two people in the boat : ----" << endl;
     istringstream iss("e voleur\ne policier\ne jeanne\nq");
-    cin.rdbuf(iss.rdbuf());
 
+    cin.rdbuf(iss.rdbuf());
     commonControllerRunTest();
 }
 
 void embarkingAndDisembarkingTheSamePeopleTwiceTest() {
-    cout << "---- Wrong or invalid input : ----" << endl;
+    cout << "---- Embarking and disembarking one Person twice : ----" << endl;
 
     istringstream iss("e voleur\ne voleur\ne policier\nm\nd voleur\nd voleur\nq");
-    cin.rdbuf(iss.rdbuf());
 
+    cin.rdbuf(iss.rdbuf());
     commonControllerRunTest();
 }
 
 void resetProgramTest() {
-    cout << "---- Solution scenario : ----" << endl;
+    cout << "---- Resetting the program : ----" << endl;
 
     istringstream iss("e voleur\ne policier\nm\nd voleur\nm\ne jeanne\nm\n"
                       "d policier\nd jeanne\nr\nq");
-    cin.rdbuf(iss.rdbuf());
 
+    cin.rdbuf(iss.rdbuf());
     commonControllerRunTest();
 }
 
@@ -144,7 +151,7 @@ void wrongOrInvalidInputTest() {
 
     istringstream iss("e paire\ne pierre et paul\nerer pere\n\ne voleur\n"
                       "e policier\n\nm\nd valeur\nq");
-    cin.rdbuf(iss.rdbuf());
 
+    cin.rdbuf(iss.rdbuf());
     commonControllerRunTest();
 }
