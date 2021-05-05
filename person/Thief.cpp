@@ -8,8 +8,16 @@
 
 #include "Thief.h"
 
-Thief::Thief() : Person("voleur", PersonType::Thief) {}
+Thief::Thief() : Person("voleur") {}
 
 bool Thief::canDrive() const {
     return false;
+}
+
+bool Thief::isFamily() const{
+    return false;
+}
+
+bool Thief::isThief() const{
+    return true;
 }

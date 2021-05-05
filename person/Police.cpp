@@ -7,4 +7,12 @@
  */
 #include "Police.h"
 
-Police::Police() : Person("policier",PersonType::Police) { }
+Police::Police() : Person("policier") { }
+
+bool Police::isFamily() const {
+    return false;
+}
+
+bool Police::isPolice() const {
+    return true;
+}

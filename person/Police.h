@@ -16,6 +16,18 @@ public:
      * Default constructor of Police
      */
     Police();
+
+    /**
+     * Overriding abstract isFamily() method
+     * @return false, a Policeman is not a family member
+     */
+    bool isFamily() const override;
+
+    /**
+     * Overriding abstract isPolice() method
+     * @return true
+     */
+    bool isPolice() const override;
 };
 
 #endif //LABO03_POLICE_H

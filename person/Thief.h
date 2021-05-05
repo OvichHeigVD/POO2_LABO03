@@ -19,10 +19,22 @@ public:
     Thief();
 
     /**
-     * Overriding canDrive() method
+     * Overriding abstract canDrive() method
      * @return false, a Thief cannot drive
      */
     bool canDrive() const override;
+
+    /**
+     * Overriding abstract isFamily() method
+     * @return false, a Thief is not a family member
+     */
+    bool isFamily() const override;
+
+    /**
+     * Overriding abstract isThief() method
+     * @return true
+     */
+    bool isThief() const override;
 };
 
 #endif //LABO03_THIEF_H

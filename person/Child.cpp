@@ -10,7 +10,7 @@
 
 Child::Child(std::string name, const Mother* mommy,
              const Father* daddy, const Gender gender):
-             Person(std::move(name), PersonType::Family),
+             Person(std::move(name)),
              mommy(mommy), daddy(daddy), gender(gender) {}
 
 bool Child::canDrive() const {

@@ -319,13 +319,13 @@ bool Controller::controlAccompanimentRulesOnBank(Container* where) {
 
     // Check if in the Container, there is any 'type' of Person
     for(const Person* person : *where){
-        if(person->getType() == Person::Family) {
+        if(person->isFamily()) {
             hasFamilyMember = true;
         }
-        if(person->getType() == Person::Police) {
+        if(person->isPolice()) {
             hasPoliceman = true;
         }
-        if(person->getType() == Person::Thief) {
+        if(person->isThief()) {
             hasThief = true;
         }
         if(person->isChild()) { // check if Child is accompanied correctly

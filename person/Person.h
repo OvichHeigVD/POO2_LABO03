@@ -14,22 +14,36 @@
 
 class Person {
 public:
-    /**
-     * Enum of category of person. Can be a family member, a policeman or a thief
-     */
-    enum PersonType { Family, Police, Thief };
 
     /**
-     * Method checking if a Person can drive the boat
+     * Abstract Method checking if a Person can drive the boat
      * @return true by default if able, false otherwise
      */
     virtual bool canDrive() const;
 
     /**
-     * Method cheking if a Person is a child
+     * Abstract Method cheking if a Person is a child
      * @return true if child, otherwise false (by default)
      */
     virtual bool isChild() const;
+
+    /**
+     * Abstract Method cheking if a Person is a family member
+     * @return false if not family, otherwise true (by default)
+     */
+    virtual bool isFamily() const;
+
+    /**
+     * Abstract Method cheking if a Person is a Thief
+     * @return true if thief, otherwise false (by default)
+     */
+    virtual bool isThief() const;
+
+    /**
+     * Abstract Method cheking if a Person is a Police
+     * @return true if police, otherwise false (by default)
+     */
+    virtual bool isPolice() const;
 
     /**
      * Getter of name
@@ -37,22 +51,14 @@ public:
      */
     std::string getName() const;
 
-    /**
-     * Getter of type
-     * @return the type of a Person
-     */
-    PersonType getType() const;
-
 protected:
     /**
      * Common constructor for all Person type
      * @param name - the name of the Person
-     * @param type - the category they belong (Family, Police, Thief)
      */
-    Person(std::string name, PersonType type);
+    Person(std::string name);
 private:
     const std::string name; // name of a Person
-    PersonType type; // type of a Person
 };
 
 #endif //LABO03_PERSON_H

@@ -22,7 +22,7 @@ public:
     enum Gender { Boy, Girl };
 
     /**
-     * Abstract method checking constraint of children with parents
+     * Pure Abstract method checking constraint of children with parents
      * @param fatherPresent - boolean if father is present
      * @param motherPresent - boolean if mother is present
      * @return true if constraint is correct, false otherwise

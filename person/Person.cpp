@@ -8,7 +8,7 @@
 
 #include "Person.h"
 
-Person::Person(std::string name, PersonType type) : name(name), type(type) { }
+Person::Person(std::string name) : name(name) { }
 
 bool Person::canDrive() const {
     return true;
@@ -22,6 +22,14 @@ std::string Person::getName() const {
     return this->name;
 }
 
-Person::PersonType Person::getType() const {
-    return this->type;
+bool Person::isFamily() const {
+    return true;
+}
+
+bool Person::isThief() const {
+    return false;
+}
+
+bool Person::isPolice() const {
+    return false;
 }

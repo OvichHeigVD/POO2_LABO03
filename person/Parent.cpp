@@ -8,7 +8,7 @@
 
 #include "Parent.h"
 
-Parent::Parent(std::string name) : Person(std::move(name), PersonType::Family) { }
+Parent::Parent(std::string name) : Person(std::move(name)) { }
 
 bool Parent::canDrive() const {
     return Person::canDrive();
