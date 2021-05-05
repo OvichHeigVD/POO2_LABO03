@@ -165,7 +165,7 @@ bool Controller::embark(const std::string& who) {
         Container::Iterator it = this->boat->getAnchoredBank()->findByName(who);
         if(it != this->boat->getAnchoredBank()->end()) { // found the Person (who)
             // Check if the Person can embark based on constraints
-            if(this->controlAccompanimentRules(this->boat->getAnchoredBank(),
+            if(Controller::controlAccompanimentRules(this->boat->getAnchoredBank(),
                                                this->boat, *it)) {
                 // Removing the Person from one Container, then adding to the other
                 this->boat->getAnchoredBank()->remove(*it);
@@ -185,7 +185,7 @@ bool Controller::embark(const std::string& who) {
 bool Controller::disembark(const std::string& who) {
     Container::Iterator it = this->boat->findByName(who);
     if(it != this->boat->end()) {
-        if(this->controlAccompanimentRules(
+        if(Controller::controlAccompanimentRules(
                 this->boat, this->boat->getAnchoredBank(), *it)) {
             this->boat->remove(*it);
             this->boat->getAnchoredBank()->add(*it);

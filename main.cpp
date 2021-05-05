@@ -25,7 +25,7 @@ void wrongOrInvalidInputTest();
 int main() {
 
     Controller ctrl;
-    ctrl.showMenu();
+    Controller::showMenu();
     ctrl.display();
     while(ctrl.notEnd()){
         ctrl.nextTurn();
@@ -47,7 +47,7 @@ int main() {
 
 void commonControllerRunTest() {
     Controller ctrl;
-    ctrl.showMenu();
+    Controller::showMenu();
     ctrl.display();
     while(ctrl.notEnd()){
         ctrl.nextTurn();

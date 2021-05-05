@@ -56,7 +56,7 @@ protected:
      * Common constructor for all Person type
      * @param name - the name of the Person
      */
-    Person(std::string name);
+    explicit Person(std::string name);
 private:
     const std::string name; // name of a Person
 };

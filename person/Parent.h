@@ -11,7 +11,7 @@ class Parent : public Person {
 public:
     bool canDrive() const override;
 protected:
-    Parent(std::string name);
+    explicit Parent(std::string name);
 
 };
 

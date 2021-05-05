@@ -8,7 +8,8 @@
 
 #include "Person.h"
 
-Person::Person(std::string name) : name(name) { }
+
+Person::Person(std::string name) : name(std::move(name)) { }
 
 bool Person::canDrive() const {
     return true;
