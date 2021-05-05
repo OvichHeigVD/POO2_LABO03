@@ -25,15 +25,18 @@ class Container {
      */
     friend std::ostream& operator<<(std::ostream& os, const Container& rhs);
 
-public:
-    //Using an alias List::iterator as Iterator
-    using Iterator = List::iterator;
-
+protected:
     /**
      * Constructor of a Container
      * @param name - the name of the Container
      */
     explicit Container(std::string name);
+
+public:
+    //Using an alias List::iterator as Iterator
+    using Iterator = List::iterator;
+
+
 
     /**
      * Method adding a Person to the Container
